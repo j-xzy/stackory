@@ -1,5 +1,11 @@
 # @stackory/ui-ink
 
+## 2.0.1
+
+### Patch Changes
+
+- 1a466d9: Fix path
+
 ## 2.0.0
 
 ### Major Changes
