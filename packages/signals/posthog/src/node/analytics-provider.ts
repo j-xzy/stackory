@@ -3,7 +3,7 @@ import type {
 	IAnalyticsProvider,
 	IIdentifyPayload,
 	ITrackEvent,
-} from '@common/signals-core/analytics';
+} from '@stackory/signals-core/analytics';
 import type { PostHog } from 'posthog-node';
 
 type IJsonValue =

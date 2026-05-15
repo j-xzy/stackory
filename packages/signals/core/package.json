@@ -55,5 +55,10 @@
     "check:lint": "biome check --write",
     "check:type": "tsc -p ./tsconfig.esm.json --noEmit",
     "check:dep": "depcruise --config .dependency-cruiser.mjs src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/j-xzy/stackory",
+    "directory": "packages/signals/core"
   }
 }

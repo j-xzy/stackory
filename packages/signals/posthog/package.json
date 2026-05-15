@@ -40,5 +40,10 @@
     "@stackory/signals-core": "workspace:*",
     "posthog-js": "1.373.4",
     "posthog-node": "5.34.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/j-xzy/stackory",
+    "directory": "packages/signals/posthog"
   }
 }

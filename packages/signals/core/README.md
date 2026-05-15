@@ -1,4 +1,4 @@
-# @common/signals-core
+# @stackory/signals-core
 
 Framework-agnostic store for user behavioral signals, feature flags, and A/B experiment assignments.
 
@@ -15,14 +15,14 @@ Framework-agnostic store for user behavioral signals, feature flags, and A/B exp
 
 ## Core Project Context
 
-- Package name: `@common/signals-core`
+- Package name: `@stackory/signals-core`
 - Part of `common/signals/core/` in the monorepo
 - Zero runtime dependencies (only `@common/core-constants` as workspace dep)
 - Primary commands:
-  - Type-check: `pnpm --filter @common/signals-core check:type`
-  - Test: `pnpm --filter @common/signals-core check:test`
-  - Lint: `pnpm --filter @common/signals-core check:lint`
-  - Build: `pnpm --filter @common/signals-core build`
+  - Type-check: `pnpm --filter @stackory/signals-core check:type`
+  - Test: `pnpm --filter @stackory/signals-core check:test`
+  - Lint: `pnpm --filter @stackory/signals-core check:lint`
+  - Build: `pnpm --filter @stackory/signals-core build`
 - All public exports go through `src/index.ts`
 
 ## Architecture Notes
@@ -79,7 +79,7 @@ Framework-agnostic store for user behavioral signals, feature flags, and A/B exp
 ### Define a project-specific registry
 
 ```ts
-import { defineSignal } from '@common/signals-core';
+import { defineSignal } from '@stackory/signals-core';
 
 export const registry = {
   onboarding_completed: defineSignal({ type: 'boolean', defaultValue: false }),
@@ -94,7 +94,7 @@ export type SignalKey = keyof typeof registry;
 ### Instantiate the store
 
 ```ts
-import { UserSignalsStore } from '@common/signals-core';
+import { UserSignalsStore } from '@stackory/signals-core';
 
 const store = new UserSignalsStore(registry, {
   persister: localStoragePersister,
@@ -105,7 +105,7 @@ const store = new UserSignalsStore(registry, {
 ### Implement a plugin
 
 ```ts
-import type { ISignalPlugin } from '@common/signals-core';
+import type { ISignalPlugin } from '@stackory/signals-core';
 
 const posthogPlugin: ISignalPlugin<SignalKey> = {
   name: 'posthog',

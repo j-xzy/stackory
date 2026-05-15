@@ -20,6 +20,9 @@ importers:
       '@infra/tsconfig-presets':
         specifier: workspace:*
         version: link:infra/tsconfig-presets
+      '@infra/types':
+        specifier: workspace:*
+        version: link:infra/types
       '@stackory/monosync':
         specifier: workspace:*
         version: link:packages/monosync
@@ -55,6 +58,8 @@ importers:
         version: 4.6.2
 
   infra/tsconfig-presets: {}
+
+  infra/types: {}
 
   packages/monosync:
     dependencies:

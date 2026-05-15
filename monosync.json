@@ -21,6 +21,7 @@
 		"posthog-node": "5.34.1"
 	},
 	"devDependencies": {
+		"@infra/types": "workspace:*",
 		"@infra/dep-presets": "workspace:*",
 		"@infra/tsconfig-presets": "workspace:*",
 		"@stackory/monosync": "workspace:*",

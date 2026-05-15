@@ -1,6 +1,6 @@
-# @common/signals-posthog
+# @stackory/signals-posthog
 
-PostHog adapter for `@common/signals-core`. Implements `IAnalyticsProvider` using the PostHog web SDK (`posthog-js`).
+PostHog adapter for `@stackory/signals-core`. Implements `IAnalyticsProvider` using the PostHog web SDK (`posthog-js`).
 
 ## Rules & Guardrails
 
@@ -9,24 +9,24 @@ PostHog adapter for `@common/signals-core`. Implements `IAnalyticsProvider` usin
 - Never import from `posthog-js/react` or `@posthog/react` here — this package is framework-agnostic and wraps the raw `PostHog` instance only.
 - Do NOT add React, MobX, or any UI framework to `dependencies`.
 - All values passed to PostHog MUST be JSON-safe. Use `toJsonValue`/`toJsonObject` (in `analytics-provider.ts`) to normalize before passing to any PostHog method.
-- Import entry point is `@common/signals-posthog/web`. Do not add a barrel at the package root.
+- Import entry point is `@stackory/signals-posthog/web`. Do not add a barrel at the package root.
 - If adding a React Native adapter, create `src/native/` and add a `./native` export in `package.json` — do NOT mix web and native in `src/web/`.
 
 ## Core Project Context
 
-- Package name: `@common/signals-posthog`
+- Package name: `@stackory/signals-posthog`
 - Location: `common/signals/posthog/`
-- Depends on: `@common/signals-core` (workspace), `posthog-js` (pinned)
-- Public export: `@common/signals-posthog/web` → `PosthogAnalyticsProvider`
+- Depends on: `@stackory/signals-core` (workspace), `posthog-js` (pinned)
+- Public export: `@stackory/signals-posthog/web` → `PosthogAnalyticsProvider`
 - Primary commands:
-  - Type-check: `pnpm --filter @common/signals-posthog check:type`
-  - Lint: `pnpm --filter @common/signals-posthog check:lint`
-  - Build: `pnpm --filter @common/signals-posthog build`
+  - Type-check: `pnpm --filter @stackory/signals-posthog check:type`
+  - Lint: `pnpm --filter @stackory/signals-posthog check:lint`
+  - Build: `pnpm --filter @stackory/signals-posthog build`
 - No tests currently. Add co-located `*.test.ts` files under `src/web/` when adding logic.
 
 ## Architecture Notes
 
-- **`PosthogAnalyticsProvider`** (`src/web/analytics-provider.ts`) — sole export. Implements `IAnalyticsProvider` from `@common/signals-core/analytics`.
+- **`PosthogAnalyticsProvider`** (`src/web/analytics-provider.ts`) — sole export. Implements `IAnalyticsProvider` from `@stackory/signals-core/analytics`.
   - Constructed with a `PostHog` instance (injected by the consumer — do NOT call `posthog.init()` here).
   - Stateless: all state lives in the injected `PostHog` instance.
 
@@ -43,7 +43,7 @@ PostHog adapter for `@common/signals-core`. Implements `IAnalyticsProvider` usin
 
 - **`toJsonValue` / `toJsonObject`** — private sanitizers. Strip `undefined`, coerce `Date` to ISO string, recurse into arrays and objects. Call before every PostHog method that accepts `Properties`.
 
-- **`IAnalyticsProvider` contract** (from `@common/signals-core/analytics`) — all methods are `async`. PostHog calls that are synchronous (e.g., `identify`, `group`, `reset`) are wrapped with implicit `Promise` resolution; no `await` needed internally.
+- **`IAnalyticsProvider` contract** (from `@stackory/signals-core/analytics`) — all methods are `async`. PostHog calls that are synchronous (e.g., `identify`, `group`, `reset`) are wrapped with implicit `Promise` resolution; no `await` needed internally.
 
 - **`group` hardcodes `groupType = 'organization'`** — change only if the PostHog project's group analytics configuration changes.
 
@@ -68,7 +68,7 @@ PostHog adapter for `@common/signals-core`. Implements `IAnalyticsProvider` usin
 ### Instantiate and use
 
 ```ts
-import { PosthogAnalyticsProvider } from '@common/signals-posthog/web';
+import { PosthogAnalyticsProvider } from '@stackory/signals-posthog/web';
 import posthog from 'posthog-js';
 
 const provider = new PosthogAnalyticsProvider(posthog);
@@ -88,7 +88,7 @@ provider.reset();
 
 ### Add a new analytics method
 
-1. Add the method signature to `IAnalyticsProvider` in `@common/signals-core/analytics`.
+1. Add the method signature to `IAnalyticsProvider` in `@stackory/signals-core/analytics`.
 2. Implement in `PosthogAnalyticsProvider` using an existing PostHog SDK method.
 3. Sanitize all properties through `this.buildProperties(...)`.
 4. Verify the PostHog method exists on the `PostHog` type — do not assume Segment-style APIs exist.
