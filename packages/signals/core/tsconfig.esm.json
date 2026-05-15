@@ -1,0 +1,26 @@
+{
+	"extends": "@infra/tsconfig-presets/lib.esm.json",
+	"compilerOptions": {
+		"composite": true,
+		"outDir": "./dist/esm",
+		"rootDir": "./src",
+		"tsBuildInfoFile": "./dist/esm/.tsbuildinfo",
+		"lib": [
+			"ESNext"
+		],
+		"types": [
+			"@infra/types/base-web-standard"
+		],
+	},
+	"include": [
+		"./src"
+	],
+	"exclude": [
+		"node_modules",
+		"dist",
+		"test",
+		"__tests__",
+		"**/*spec.ts",
+		"**/*test.ts"
+	]
+}

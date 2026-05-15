@@ -4,6 +4,7 @@
 		"minAgeDays": 7
 	},
 	"dependencies": {
+		"@stackory/signals-core": "workspace:*",
 		"semver": "7.7.4",
 		"yaml": "2.9.0",
 		"lodash.merge": "4.6.2",
@@ -15,9 +16,12 @@
 		"remark-breaks": "4.0.0",
 		"lucide-react": "1.14.0",
 		"ink": "7.0.2",
-		"string-width": "8.2.1"
+		"string-width": "8.2.1",
+		"posthog-js": "1.373.4",
+		"posthog-node": "5.34.1"
 	},
 	"devDependencies": {
+		"@infra/types": "workspace:*",
 		"@infra/dep-presets": "workspace:*",
 		"@infra/tsconfig-presets": "workspace:*",
 		"@stackory/monosync": "workspace:*",

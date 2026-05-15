@@ -1,0 +1,26 @@
+{
+	"extends": "@infra/tsconfig-presets/lib.cjs.json",
+	"compilerOptions": {
+		"composite": true,
+		"outDir": "./dist/cjs",
+		"rootDir": "./src",
+		"tsBuildInfoFile": "./dist/cjs/.tsbuildinfo",
+		"lib": [
+			"ESNext"
+		],
+		"types": [
+			"@infra/types/base-web-standard"
+		],
+	},
+	"include": [
+		"./src"
+	],
+	"exclude": [
+		"node_modules",
+		"dist",
+		"test",
+		"__tests__",
+		"**/*spec.ts",
+		"**/*test.ts"
+	]
+}

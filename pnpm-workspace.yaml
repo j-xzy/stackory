@@ -1,12 +1,17 @@
 packages:
   - infra/tsconfig-presets
   - infra/dep-presets
+  - infra/types
   - packages/monosync
   - packages/ui-web
   - packages/ui-ink
+  - packages/signals/core
+  - packages/signals/posthog
 
 # minimumReleaseAge: 1440
 blockExoticSubdeps: true
 allowBuilds:
+  core-js: false
   msw: false
   nx: false
+  protobufjs: false
