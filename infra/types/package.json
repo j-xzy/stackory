@@ -1,3 +1,4 @@
 {
-	"name": "@infra/types"
+	"name": "@infra/types",
+	"private": true
 }
