@@ -1,0 +1,13 @@
+{
+	"extends": "@infra/tsconfig-presets/lib.cjs.json",
+	"compilerOptions": {
+		"types": [
+			"node"
+		]
+	},
+	"include": [
+		"src/**/*.ts",
+		"tests/**/*.ts",
+		"vitest.config.ts"
+	]
+}
