@@ -13,11 +13,11 @@ jobs:
   create_mr:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: pnpm
@@ -34,7 +34,7 @@ jobs:
           git push origin HEAD:$BRANCH_NAME
           echo "branch_name=$BRANCH_NAME" >> $GITHUB_ENV
       - name: Create a pull request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.GH_PAT }}
           branch: ${{ env.branch_name }}
