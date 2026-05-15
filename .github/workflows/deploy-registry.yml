@@ -5,7 +5,8 @@ on:
     branches:
       - main
     paths:
-      - 'packages/ui-web/**'
+      - 'packages/ui-web/registry.json'
+      - 'packages/ui-web/registry/**'
       - '.github/workflows/deploy-registry.yml'
   workflow_dispatch:
 
