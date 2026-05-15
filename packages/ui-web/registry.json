@@ -4,13 +4,49 @@
 	"homepage": "https://j-xzy.github.io/stackory",
 	"items": [
 		{
-			"name": "hello-world",
-			"type": "registry:component",
-			"title": "Hello World",
-			"description": "A simple hello world component to demonstrate the registry pattern.",
+			"name": "coverflow",
+			"type": "registry:block",
+			"title": "Coverflow",
+			"description": "A 3D coverflow carousel component with keyboard navigation and customizable visual config.",
+			"dependencies": ["lucide-react"],
+			"registryDependencies": ["utils"],
 			"files": [
 				{
-					"path": "registry/new-york/hello-world/hello-world.tsx",
+					"path": "registry/coverflow/index.ts",
+					"type": "registry:component"
+				},
+				{
+					"path": "registry/coverflow/coverflow.tsx",
+					"type": "registry:component"
+				},
+				{
+					"path": "registry/coverflow/coverflow-item.tsx",
+					"type": "registry:component"
+				},
+				{
+					"path": "registry/coverflow/coverflow.types.ts",
+					"type": "registry:component"
+				},
+				{
+					"path": "registry/coverflow/coverflow-utils.ts",
+					"type": "registry:component"
+				},
+				{
+					"path": "registry/coverflow/use-coverflow-state.ts",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "markdown-content",
+			"type": "registry:component",
+			"title": "Markdown Content",
+			"description": "A markdown renderer with GFM and line break support, styled with Tailwind.",
+			"dependencies": ["react-markdown", "remark-gfm", "remark-breaks"],
+			"registryDependencies": ["utils"],
+			"files": [
+				{
+					"path": "registry/markdown-content.tsx",
 					"type": "registry:component"
 				}
 			]
