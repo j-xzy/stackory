@@ -1,6 +1,6 @@
 {
 	"name": "@stackory/monosync",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"type": "module",
 	"bin": {
 		"monosync": "./dist/bin.js"
