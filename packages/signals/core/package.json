@@ -1,0 +1,59 @@
+{
+  "name": "@stackory/signals-core",
+  "version": "0.0.1",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    },
+    "./experiment": {
+      "import": {
+        "types": "./dist/esm/experiment/index.d.ts",
+        "default": "./dist/esm/experiment/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/experiment/index.d.ts",
+        "default": "./dist/cjs/experiment/index.js"
+      }
+    },
+    "./analytics": {
+      "import": {
+        "types": "./dist/esm/analytics/index.d.ts",
+        "default": "./dist/esm/analytics/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/analytics/index.d.ts",
+        "default": "./dist/cjs/analytics/index.js"
+      }
+    },
+    "./analytics-signals": {
+      "import": {
+        "types": "./dist/esm/analytics-signals/index.d.ts",
+        "default": "./dist/esm/analytics-signals/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/analytics-signals/index.d.ts",
+        "default": "./dist/cjs/analytics-signals/index.js"
+      }
+    }
+  },
+  "react-native": "./src/index",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "rimraf ./dist && tsc --project tsconfig.cjs.json && tsc --project tsconfig.esm.json",
+    "clean": "rimraf ./node_modules dist",
+    "check:test": "vitest --watch=false",
+    "check:lint": "biome check --write",
+    "check:type": "tsc -p ./tsconfig.esm.json --noEmit",
+    "check:dep": "depcruise --config .dependency-cruiser.mjs src"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "@stackory/signals-posthog",
+  "version": "0.0.1",
+  "exports": {
+    "./node": {
+      "import": {
+        "types": "./dist/esm/node/index.d.ts",
+        "default": "./dist/esm/node/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/node/index.d.ts",
+        "default": "./dist/cjs/node/index.js"
+      }
+    },
+    "./web": {
+      "import": {
+        "types": "./dist/esm/web/index.d.ts",
+        "default": "./dist/esm/web/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/web/index.d.ts",
+        "default": "./dist/cjs/web/index.js"
+      }
+    }
+  },
+  "react-native": "./src/index",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "rimraf ./dist && tsc --project tsconfig.cjs.json && tsc --project tsconfig.esm.json",
+    "clean": "rimraf ./node_modules dist",
+    "check:test": "vitest --watch=false --passWithNoTests",
+    "check:lint": "biome check --write",
+    "check:type": "tsc -p ./tsconfig.esm.json --noEmit",
+    "check:dep": "depcruise --config .dependency-cruiser.mjs src"
+  },
+  "dependencies": {
+    "@stackory/signals-core": "workspace:*",
+    "posthog-js": "1.373.4",
+    "posthog-node": "5.34.1"
+  }
+}

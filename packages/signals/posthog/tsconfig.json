@@ -1,0 +1,14 @@
+{
+	"extends": "@infra/tsconfig-presets/base.json",
+	"compilerOptions": {
+		"composite": true,
+		"lib": [
+			"ESNext"
+		],
+		"module": "esnext",
+		"moduleResolution": "bundler",
+		"types": [
+			"@infra/types/base-web-standard"
+		],
+	}
+}
