@@ -2,3 +2,6 @@ packages:
   - infra/tsconfig-presets
   - infra/dep-presets
   - packages/monosync
+
+minimumReleaseAge: 1440
+blockExoticSubdeps: true
