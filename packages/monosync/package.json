@@ -1,6 +1,6 @@
 {
 	"name": "@stackory/monosync",
-	"version": "1.0.0",
+	"version": "0.0.1",
 	"type": "module",
 	"bin": {
 		"monosync": "./dist/bin.js"
@@ -37,7 +37,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/j-xzy/stackor",
+		"url": "https://github.com/j-xzy/stackory",
 		"directory": "packages/monosync"
 	}
 }
