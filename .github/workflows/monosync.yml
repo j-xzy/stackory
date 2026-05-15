@@ -1,4 +1,4 @@
-name: monosync
+name: Monosync
 
 on:
   workflow_dispatch:
