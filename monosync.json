@@ -1,28 +1,28 @@
 {
-	"$comment": "Use exact versions (no ^ or ~ prefixes). This configuration enforces consistent dependency versions across all workspace packages.",
-	"config": {
-		"minAgeDays": 7
-	},
-	"dependencies": {
-		"semver": "7.7.2",
-		"yaml": "2.9.0",
-		"lodash.merge": "4.6.2"
-	},
-	"devDependencies": {
-		"@infra/dep-presets": "workspace:*",
-		"@infra/tsconfig-presets": "workspace:*",
-		"@stackory/monosync": "workspace:*",
-		"@biomejs/biome": "2.4.15",
-		"@changesets/cli": "2.31.0",
-		"dependency-cruiser": "17.4.0",
-		"lefthook": "2.1.6",
-		"nx": "22.7.1",
-		"rimraf": "6.1.3",
-		"tsc-alias": "1.8.17",
-		"tsx": "4.21.0",
-		"typescript": "6.0.3",
-		"vitest": "4.1.6",
-		"@types/node": "24.10.1",
-		"@types/semver": "7.7.1"
-	}
+  "$comment": "Use exact versions (no ^ or ~ prefixes). This configuration enforces consistent dependency versions across all workspace packages.",
+  "config": {
+    "minAgeDays": 7
+  },
+  "dependencies": {
+    "semver": "7.7.4",
+    "yaml": "2.9.0",
+    "lodash.merge": "4.6.2"
+  },
+  "devDependencies": {
+    "@infra/dep-presets": "workspace:*",
+    "@infra/tsconfig-presets": "workspace:*",
+    "@stackory/monosync": "workspace:*",
+    "@biomejs/biome": "2.4.15",
+    "@changesets/cli": "2.31.0",
+    "dependency-cruiser": "17.4.0",
+    "lefthook": "2.1.6",
+    "nx": "22.7.1",
+    "rimraf": "6.1.3",
+    "tsc-alias": "1.8.17",
+    "tsx": "4.21.0",
+    "typescript": "6.0.3",
+    "vitest": "4.1.6",
+    "@types/node": "25.6.2",
+    "@types/semver": "7.7.1"
+  }
 }

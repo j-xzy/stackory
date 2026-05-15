@@ -1,13 +1,13 @@
 {
-	"name": "@infra/tsconfig-presets",
-	"private": true,
-	"version": "1.0.0",
-	"description": "Shared TypeScript configurations (tsconfig) for the monorepo.",
-	"files": [
-		"base.json",
-		"hono.json",
-		"lib.cjs.json",
-		"lib.esm.json",
-		"react.json"
-	]
+  "name": "@infra/tsconfig-presets",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Shared TypeScript configurations (tsconfig) for the monorepo.",
+  "files": [
+    "base.json",
+    "hono.json",
+    "lib.cjs.json",
+    "lib.esm.json",
+    "react.json"
+  ]
 }
