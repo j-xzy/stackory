@@ -1,0 +1,25 @@
+{
+	"name": "@stackory/ui-web",
+	"version": "0.1.0",
+	"type": "module",
+	"private": false,
+	"scripts": {
+		"build": "shadcn build",
+		"dev": "shadcn build --watch",
+		"check:lint": "biome check --write",
+		"check:type": "tsc -p ./tsconfig.json --noEmit",
+		"check:dep": "depcruise --config .dependency-cruiser.mjs registry"
+	},
+	"devDependencies": {
+		"@types/react": "19.1.4",
+		"dependency-cruiser": "17.4.0",
+		"react": "19.1.0",
+		"shadcn": "2.5.0",
+		"tailwindcss": "4.1.6"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/j-xzy/stackory",
+		"directory": "packages/ui-web"
+	}
+}

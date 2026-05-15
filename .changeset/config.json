@@ -8,6 +8,7 @@
 	"updateInternalDependencies": "patch",
 	"ignore": [
 		"@infra/tsconfig-presets",
-		"@infra/dep-presets"
+		"@infra/dep-presets",
+		"@stackory/ui-web"
 	]
 }

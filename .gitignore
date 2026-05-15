@@ -3,6 +3,9 @@
 # compiled output
 dist
 tmp
+
+# registry build output
+packages/ui-web/public
 /out-tsc
 
 # dependencies

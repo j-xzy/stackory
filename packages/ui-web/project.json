@@ -1,0 +1,8 @@
+{
+	"name": "ui-web",
+	"targets": {
+		"build": {
+			"outputs": ["{projectRoot}/public"]
+		}
+	}
+}

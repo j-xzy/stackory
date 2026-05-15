@@ -23,6 +23,10 @@
 		"typescript": "6.0.3",
 		"vitest": "4.1.6",
 		"@types/node": "24.10.1",
-		"@types/semver": "7.7.1"
+		"@types/semver": "7.7.1",
+		"@types/react": "19.1.4",
+		"react": "19.1.0",
+		"shadcn": "2.5.0",
+		"tailwindcss": "4.1.6"
 	}
 }

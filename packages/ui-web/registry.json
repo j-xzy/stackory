@@ -1,0 +1,19 @@
+{
+	"$schema": "https://ui.shadcn.com/schema/registry.json",
+	"name": "stackory-ui-web",
+	"homepage": "https://j-xzy.github.io/stackory",
+	"items": [
+		{
+			"name": "hello-world",
+			"type": "registry:component",
+			"title": "Hello World",
+			"description": "A simple hello world component to demonstrate the registry pattern.",
+			"files": [
+				{
+					"path": "registry/new-york/hello-world/hello-world.tsx",
+					"type": "registry:component"
+				}
+			]
+		}
+	]
+}
