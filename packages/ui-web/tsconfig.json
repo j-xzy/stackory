@@ -1,0 +1,9 @@
+{
+	"extends": "@infra/tsconfig-presets/react.json",
+	"compilerOptions": {
+		"paths": {
+			"@/*": ["./*"]
+		}
+	},
+	"include": ["registry/**/*"]
+}

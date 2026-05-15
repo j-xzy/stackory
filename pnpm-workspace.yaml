@@ -2,8 +2,10 @@ packages:
   - infra/tsconfig-presets
   - infra/dep-presets
   - packages/monosync
+  - packages/ui-web
 
 minimumReleaseAge: 1440
 blockExoticSubdeps: true
 allowBuilds:
+  msw: false
   nx: false
