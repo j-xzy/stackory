@@ -5,7 +5,6 @@
   "private": true,
   "scripts": {
     "build": "shadcn build",
-    "dev": "shadcn build --watch",
     "check:lint": "biome check --write",
     "check:type": "tsc -p ./tsconfig.json --noEmit",
     "check:dep": "depcruise --config .dependency-cruiser.mjs registry lib"
