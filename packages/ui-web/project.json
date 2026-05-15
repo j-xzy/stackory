@@ -2,7 +2,7 @@
 	"name": "ui-web",
 	"targets": {
 		"build": {
-			"outputs": ["{projectRoot}/public"]
+			"outputs": ["{projectRoot}/dist"]
 		}
 	}
 }

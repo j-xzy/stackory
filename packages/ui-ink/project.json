@@ -1,0 +1,10 @@
+{
+	"name": "ui-ink",
+	"targets": {
+		"build": {
+			"outputs": [
+				"{projectRoot}/dist"
+			]
+		}
+	}
+}

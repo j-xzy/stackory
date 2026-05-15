@@ -1,5 +1,5 @@
 {
-  "name": "@stackory/ui-web",
+  "name": "@stackory/ui-ink",
   "version": "1.0.1",
   "type": "module",
   "private": true,
@@ -10,22 +10,18 @@
     "check:dep": "depcruise --config .dependency-cruiser.mjs registry"
   },
   "dependencies": {
+    "ink": "7.0.2",
     "react": "19.2.6",
-    "tailwind-merge": "3.5.0",
-    "clsx": "2.1.1",
-    "react-markdown": "10.1.0",
-    "remark-gfm": "4.0.1",
-    "remark-breaks": "4.0.0",
-    "lucide-react": "1.14.0"
+    "string-width": "8.2.1"
   },
   "devDependencies": {
+    "shadcn": "4.7.0",
     "@types/react": "19.2.14",
-    "tailwindcss": "4.2.4",
-    "shadcn": "4.7.0"
+    "@types/node": "25.7.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/j-xzy/stackory",
-    "directory": "packages/ui-web"
+    "directory": "packages/ui-ink"
   }
 }

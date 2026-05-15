@@ -1,0 +1,125 @@
+{
+	"$schema": "https://ui.shadcn.com/schema/registry.json",
+	"name": "stackory-ui-ink",
+	"homepage": "https://j-xzy.github.io/stackory",
+	"items": [
+		{
+			"name": "ink-spinner",
+			"type": "registry:ui",
+			"title": "Ink Spinner",
+			"description": "A terminal spinner component with customizable frames and interval.",
+			"dependencies": ["ink"],
+			"files": [
+				{
+					"path": "registry/components/ui/spinner.tsx",
+					"type": "registry:ui",
+					"target": "@ui/spinner.tsx"
+				}
+			]
+		},
+		{
+			"name": "ink-keyboard-provider",
+			"type": "registry:component",
+			"title": "Ink Keyboard Provider",
+			"description": "A context provider for hierarchical keyboard input handling in Ink apps.",
+			"dependencies": ["ink"],
+			"files": [
+				{
+					"path": "registry/components/provider/keyboard.tsx",
+					"type": "registry:component",
+					"target": "@components/provider/keyboard.tsx"
+				}
+			]
+		},
+		{
+			"name": "ink-navigation-provider",
+			"type": "registry:component",
+			"title": "Ink Navigation Provider",
+			"description": "A context provider for focus-based navigation between Ink components.",
+			"files": [
+				{
+					"path": "registry/components/provider/navigation.tsx",
+					"type": "registry:component",
+					"target": "@components/provider/navigation.tsx"
+				}
+			]
+		},
+		{
+			"name": "ink-text-input",
+			"type": "registry:component",
+			"title": "Ink Text Input",
+			"description": "A full-featured terminal text input with cursor navigation, paste support, and history.",
+			"dependencies": ["ink", "string-width"],
+			"registryDependencies": [
+				"https://j-xzy.github.io/stackory/r/ui-ink/ink-keyboard-provider.json"
+			],
+			"files": [
+				{
+					"path": "registry/components/text-input/index.tsx",
+					"type": "registry:component",
+					"target": "@components/text-input/index.tsx"
+				},
+				{
+					"path": "registry/components/text-input/text-input.tsx",
+					"type": "registry:component",
+					"target": "@components/text-input/text-input.tsx"
+				},
+				{
+					"path": "registry/components/text-input/components/default-content.tsx",
+					"type": "registry:component",
+					"target": "@components/text-input/components/default-content.tsx"
+				},
+				{
+					"path": "registry/components/text-input/components/paste-block.tsx",
+					"type": "registry:component",
+					"target": "@components/text-input/components/paste-block.tsx"
+				},
+				{
+					"path": "registry/components/text-input/components/visual-content.tsx",
+					"type": "registry:component",
+					"target": "@components/text-input/components/visual-content.tsx"
+				},
+				{
+					"path": "registry/components/text-input/hooks/use-bpm-parser.ts",
+					"type": "registry:hook",
+					"target": "@components/text-input/hooks/use-bpm-parser.ts"
+				},
+				{
+					"path": "registry/components/text-input/hooks/use-cursor-navigation.ts",
+					"type": "registry:hook",
+					"target": "@components/text-input/hooks/use-cursor-navigation.ts"
+				},
+				{
+					"path": "registry/components/text-input/hooks/use-paste-blocks.ts",
+					"type": "registry:hook",
+					"target": "@components/text-input/hooks/use-paste-blocks.ts"
+				},
+				{
+					"path": "registry/components/text-input/hooks/use-resolved-columns.ts",
+					"type": "registry:hook",
+					"target": "@components/text-input/hooks/use-resolved-columns.ts"
+				},
+				{
+					"path": "registry/components/text-input/hooks/use-text-history.ts",
+					"type": "registry:hook",
+					"target": "@components/text-input/hooks/use-text-history.ts"
+				},
+				{
+					"path": "registry/components/text-input/hooks/use-text-mutation.ts",
+					"type": "registry:hook",
+					"target": "@components/text-input/hooks/use-text-mutation.ts"
+				},
+				{
+					"path": "registry/components/text-input/lib/bpm-protocol.ts",
+					"type": "registry:lib",
+					"target": "@components/text-input/lib/bpm-protocol.ts"
+				},
+				{
+					"path": "registry/components/text-input/lib/text-layout.ts",
+					"type": "registry:lib",
+					"target": "@components/text-input/lib/text-layout.ts"
+				}
+			]
+		}
+	]
+}
