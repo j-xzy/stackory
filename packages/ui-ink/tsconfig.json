@@ -5,7 +5,12 @@
 			"@/*": [
 				"./registry/*"
 			]
-		}
+		},
+		"types": [
+			"node"
+		]
 	},
-	"include": ["registry/**/*"]
+	"include": [
+		"registry/**/*"
+	]
 }

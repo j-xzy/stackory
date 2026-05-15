@@ -3,8 +3,9 @@ packages:
   - infra/dep-presets
   - packages/monosync
   - packages/ui-web
+  - packages/ui-ink
 
-minimumReleaseAge: 1440
+# minimumReleaseAge: 1440
 blockExoticSubdeps: true
 allowBuilds:
   msw: false

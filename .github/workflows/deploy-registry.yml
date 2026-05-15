@@ -7,6 +7,8 @@ on:
     paths:
       - 'packages/ui-web/registry.json'
       - 'packages/ui-web/registry/**'
+      - 'packages/ui-ink/registry.json'
+      - 'packages/ui-ink/registry/**'
       - '.github/workflows/deploy-registry.yml'
   workflow_dispatch:
 
@@ -31,9 +33,15 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile --ignore-scripts
       - run: pnpm --filter @stackory/ui-web build
+      - run: pnpm --filter @stackory/ui-ink build
+      - name: Merge registries
+        run: |
+          mkdir -p _site/r/ui-web _site/r/ui-ink
+          cp -r packages/ui-web/dist/r/* _site/r/ui-web/
+          cp -r packages/ui-ink/dist/r/* _site/r/ui-ink/
       - uses: actions/upload-pages-artifact@v5
         with:
-          path: packages/ui-web/public
+          path: _site
 
   deploy:
     runs-on: ubuntu-latest

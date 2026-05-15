@@ -5,66 +5,56 @@
 	"items": [
 		{
 			"name": "coverflow",
-			"type": "registry:block",
+			"type": "registry:component",
 			"title": "Coverflow",
 			"description": "A 3D coverflow carousel component with keyboard navigation and customizable visual config.",
-			"dependencies": [
-				"lucide-react"
-			],
-			"registryDependencies": [
-				"utils"
-			],
+			"dependencies": ["lucide-react"],
+			"registryDependencies": ["utils"],
 			"files": [
 				{
-					"path": "registry/coverflow/index.ts",
+					"path": "registry/components/coverflow/index.ts",
 					"type": "registry:component",
 					"target": "@components/coverflow/index.ts"
 				},
 				{
-					"path": "registry/coverflow/coverflow.tsx",
+					"path": "registry/components/coverflow/coverflow.tsx",
 					"type": "registry:component",
 					"target": "@components/coverflow/coverflow.tsx"
 				},
 				{
-					"path": "registry/coverflow/coverflow-item.tsx",
+					"path": "registry/components/coverflow/coverflow-item.tsx",
 					"type": "registry:component",
 					"target": "@components/coverflow/coverflow-item.tsx"
 				},
 				{
-					"path": "registry/coverflow/coverflow.types.ts",
-					"type": "registry:component",
+					"path": "registry/components/coverflow/coverflow.types.ts",
+					"type": "registry:lib",
 					"target": "@components/coverflow/coverflow.types.ts"
 				},
 				{
-					"path": "registry/coverflow/coverflow-utils.ts",
-					"type": "registry:component",
+					"path": "registry/components/coverflow/coverflow-utils.ts",
+					"type": "registry:lib",
 					"target": "@components/coverflow/coverflow-utils.ts"
 				},
 				{
-					"path": "registry/coverflow/use-coverflow-state.ts",
-					"type": "registry:component",
+					"path": "registry/components/coverflow/use-coverflow-state.ts",
+					"type": "registry:hook",
 					"target": "@components/coverflow/use-coverflow-state.ts"
 				}
 			]
 		},
 		{
 			"name": "markdown-content",
-			"type": "registry:component",
+			"type": "registry:ui",
 			"title": "Markdown Content",
 			"description": "A markdown renderer with GFM and line break support, styled with Tailwind.",
-			"dependencies": [
-				"react-markdown",
-				"remark-gfm",
-				"remark-breaks"
-			],
-			"registryDependencies": [
-				"utils"
-			],
+			"dependencies": ["react-markdown", "remark-gfm", "remark-breaks"],
+			"registryDependencies": ["utils"],
 			"files": [
 				{
-					"path": "registry/markdown-content.tsx",
+					"path": "registry/components/ui/markdown-content.tsx",
 					"type": "registry:ui",
-					"target": "@components/ui/markdown-content.tsx"
+					"target": "@ui/markdown-content.tsx"
 				}
 			]
 		}
