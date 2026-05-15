@@ -8,8 +8,8 @@
 		"changeset": "changeset",
 		"changeset:version": "changeset version",
 		"changeset:release": "pnpm nx run-many -t build --skip-nx-cache && changeset publish",
-		"monosync": "monosync",
-		"monosync:update": "monosync --auto --write",
+		"monosync": "tsx packages/monosync/src/bin.ts",
+		"monosync:update": "tsx packages/monosync/src/bin.ts --auto --write",
 		"prepare": "lefthook install"
 	},
 	"devDependencies": {
