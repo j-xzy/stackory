@@ -18,32 +18,32 @@
 				{
 					"path": "registry/coverflow/index.ts",
 					"type": "registry:component",
-					"target": "components/coverflow/index.ts"
+					"target": "@components/coverflow/index.ts"
 				},
 				{
 					"path": "registry/coverflow/coverflow.tsx",
 					"type": "registry:component",
-					"target": "components/coverflow/coverflow.tsx"
+					"target": "@components/coverflow/coverflow.tsx"
 				},
 				{
 					"path": "registry/coverflow/coverflow-item.tsx",
 					"type": "registry:component",
-					"target": "components/coverflow/coverflow-item.tsx"
+					"target": "@components/coverflow/coverflow-item.tsx"
 				},
 				{
 					"path": "registry/coverflow/coverflow.types.ts",
 					"type": "registry:component",
-					"target": "components/coverflow/coverflow.types.ts"
+					"target": "@components/coverflow/coverflow.types.ts"
 				},
 				{
 					"path": "registry/coverflow/coverflow-utils.ts",
 					"type": "registry:component",
-					"target": "components/coverflow/coverflow-utils.ts"
+					"target": "@components/coverflow/coverflow-utils.ts"
 				},
 				{
 					"path": "registry/coverflow/use-coverflow-state.ts",
 					"type": "registry:component",
-					"target": "components/coverflow/use-coverflow-state.ts"
+					"target": "@components/coverflow/use-coverflow-state.ts"
 				}
 			]
 		},
@@ -64,7 +64,7 @@
 				{
 					"path": "registry/markdown-content.tsx",
 					"type": "registry:ui",
-					"target": "components/ui/markdown-content.tsx"
+					"target": "@components/ui/markdown-content.tsx"
 				}
 			]
 		}
