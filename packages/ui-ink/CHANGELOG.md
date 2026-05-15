@@ -1,4 +1,4 @@
-# @stackory/ui-web
+# @stackory/ui-ink
 
 ## 2.0.0
 
@@ -21,15 +21,3 @@
   - Added `ink-keyboard-provider` — hierarchical keyboard input context provider
   - Added `ink-navigation-provider` — focus-based navigation context provider
   - Added `ink-text-input` — full-featured terminal text input with cursor navigation, paste support, undo history, and BPM protocol; depends on `ink-keyboard-provider`
-
-## 1.0.1
-
-### Patch Changes
-
-- 5f75d16: fix path
-
-## 1.0.0
-
-### Major Changes
-
-- 40ab12b: Update devDependencies
