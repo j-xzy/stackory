@@ -1,0 +1,21 @@
+{
+	"extends": "//",
+	"files": {
+		"includes": [
+			"registry/**/*",
+			"lib/*"
+		]
+	},
+	"linter": {
+		"rules": {
+			"suspicious": {
+				"noArrayIndexKey": "off"
+			}
+		}
+	},
+	"css": {
+		"linter": {
+			"enabled": false
+		}
+	}
+}
