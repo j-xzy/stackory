@@ -6,12 +6,13 @@
 	"scripts": {
 		"build": "shadcn build",
 		"dev": "shadcn build --watch",
+		"check:lint": "biome check --write",
 		"check:type": "tsc -p ./tsconfig.json --noEmit",
-		"check:lint": "biome check --write"
+		"check:dep": "depcruise --config .dependency-cruiser.mjs registry"
 	},
 	"devDependencies": {
-		"@infra/tsconfig-presets": "workspace:*",
 		"@types/react": "19.1.4",
+		"dependency-cruiser": "17.4.0",
 		"react": "19.1.0",
 		"shadcn": "2.5.0",
 		"tailwindcss": "4.1.6"

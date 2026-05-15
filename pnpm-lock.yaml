@@ -74,12 +74,12 @@ importers:
 
   packages/ui-web:
     devDependencies:
-      '@infra/tsconfig-presets':
-        specifier: workspace:*
-        version: link:../../infra/tsconfig-presets
       '@types/react':
         specifier: 19.1.4
         version: 19.1.4
+      dependency-cruiser:
+        specifier: 17.4.0
+        version: 17.4.0
       react:
         specifier: 19.1.0
         version: 19.1.0
