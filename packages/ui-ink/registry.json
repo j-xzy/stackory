@@ -4,11 +4,13 @@
 	"homepage": "https://j-xzy.github.io/stackory",
 	"items": [
 		{
-			"name": "ink-spinner",
+			"name": "spinner",
 			"type": "registry:ui",
 			"title": "Ink Spinner",
 			"description": "A terminal spinner component with customizable frames and interval.",
-			"dependencies": ["ink"],
+			"dependencies": [
+				"ink"
+			],
 			"files": [
 				{
 					"path": "registry/components/ui/spinner.tsx",
@@ -18,11 +20,13 @@
 			]
 		},
 		{
-			"name": "ink-keyboard-provider",
+			"name": "keyboard-provider",
 			"type": "registry:component",
 			"title": "Ink Keyboard Provider",
 			"description": "A context provider for hierarchical keyboard input handling in Ink apps.",
-			"dependencies": ["ink"],
+			"dependencies": [
+				"ink"
+			],
 			"files": [
 				{
 					"path": "registry/components/provider/keyboard.tsx",
@@ -32,7 +36,7 @@
 			]
 		},
 		{
-			"name": "ink-navigation-provider",
+			"name": "navigation-provider",
 			"type": "registry:component",
 			"title": "Ink Navigation Provider",
 			"description": "A context provider for focus-based navigation between Ink components.",
@@ -45,13 +49,16 @@
 			]
 		},
 		{
-			"name": "ink-text-input",
+			"name": "text-input",
 			"type": "registry:component",
 			"title": "Ink Text Input",
 			"description": "A full-featured terminal text input with cursor navigation, paste support, and history.",
-			"dependencies": ["ink", "string-width"],
+			"dependencies": [
+				"ink",
+				"string-width"
+			],
 			"registryDependencies": [
-				"https://j-xzy.github.io/stackory/r/ui-ink/ink-keyboard-provider.json"
+				"https://j-xzy.github.io/stackory/r/ui-ink/keyboard-provider.json"
 			],
 			"files": [
 				{
